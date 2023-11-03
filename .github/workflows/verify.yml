@@ -13,7 +13,7 @@ jobs:
           gittuf-version: '0.1.0'
       - name: Checkout repository
         run: |
-          gittuf clone ${{ github.repository }}
+          gittuf clone https://github.com/${{ github.repository }}
           cd ci-demo
       - name: Run gittuf verify-ref
         run: |
