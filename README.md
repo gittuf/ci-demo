@@ -18,7 +18,8 @@ identity. To inspect the policy in more detail, use `gittuf clone` to download
 the repository with the gittuf namespaces. You can find pre-built (and signed)
 binaries for gittuf from its latest
 [release](https://github.com/gittuf/gittuf/releases). Alternatively, clone the
-repository using Git and fetch `refs/gittuf/policy` manually.
+repository using Git and fetch `refs/gittuf/reference-state-log` and
+`refs/gittuf/policy` manually.
 
 ```jsonc
 {
