@@ -11,10 +11,8 @@ jobs:
         uses: gittuf/gittuf-installer@401fe20972fe2a60c73154f9c2c052cde7e7effd
         with:
           gittuf-version: '0.1.0'
-      - name: Checkout repository
+      - name: Checkout and verify repository
         run: |
           gittuf clone https://github.com/${{ github.repository }}
           cd ci-demo
-      - name: Run gittuf verify-ref
-        run: |
           gittuf verify-ref -f main
