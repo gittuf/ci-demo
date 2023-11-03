@@ -1,4 +1,4 @@
-name: Run gittuf verify
+name: gittuf Verification
 on:
   push:
     branches:
