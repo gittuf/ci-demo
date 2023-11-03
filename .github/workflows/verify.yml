@@ -1,0 +1,20 @@
+name: Run gittuf verify
+on:
+  push:
+    branches:
+      - main
+jobs:
+  gittuf-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install gittuf
+        uses: gittuf/gittuf-installer@401fe20972fe2a60c73154f9c2c052cde7e7effd
+        with:
+          gittuf-version: '0.1.0'
+      - name: Checkout repository
+        run: |
+          gittuf clone ${{ github.repository }}
+          cd ci-demo
+      - name: Run gittuf verify-ref
+        run: |
+          gittuf verify-ref -f main
