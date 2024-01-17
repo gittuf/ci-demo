@@ -8,11 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install gittuf
-        uses: gittuf/gittuf-installer@74bc31fb990a714302c6cf75f91cccdaf33961bc
-        with:
-          gittuf-version: '0.1.0'
+        uses: gittuf/gittuf-installer@8ce8fbd070477ec72678151e82b82c3d866d9fcd
       - name: Checkout and verify repository
         run: |
           gittuf clone https://github.com/${{ github.repository }}
           cd ci-demo
-          gittuf verify-ref -f main
+          gittuf verify-ref main
