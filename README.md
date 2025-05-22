@@ -2,6 +2,10 @@
 
 ![gittuf Verification](https://github.com/gittuf/ci-demo/actions/workflows/verify.yml/badge.svg)
 
+**NOTE:** This demo is being archived as CI verification is now used more
+*commonly, including in the [gittuf/gittuf
+*repository](https://github.com/gittuf/gittuf/blob/d878e5352924d63a0349357b77fa1161d123ef17/.github/workflows/gittuf-verify.yml).
+
 This is a demonstration of using gittuf verification in a CI workflow. This
 repository has a simple policy protecting the `main` branch that says all
 updates to the branch's state must be signed using Sigstore. The expected
